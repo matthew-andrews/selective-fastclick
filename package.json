@@ -1,0 +1,17 @@
+{
+  "name": "ftdomdelegate-fastclick",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify index.js -o build.js -s SelectiveFastClick"
+  },
+  "author": "Matt Andrews <matt@mattandre.ws>",
+  "license": "MIT",
+  "dependencies": {
+    "dom-delegate": "~0.5.0",
+    "fastclick": "~0.6.11",
+    "browserify": "~3.30.2"
+  }
+}
