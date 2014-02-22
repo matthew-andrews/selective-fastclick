@@ -76,7 +76,7 @@ function SelectiveFastClick(layer, selectors) {
 var proto = SelectiveFastClick.prototype;
 
 proto.destroy = function() {
-  if (this.delegate) this.delegate.destroy();
+  this.delegate.destroy();
   this.fastclick.destroy();
 };
 
