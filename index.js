@@ -14,12 +14,14 @@ var FtDomDelegate = require('dom-delegate').Delegate;
 function SelectiveFastClick(layer, selectors) {
 
   // Support:-
-  // - new SelectiveFastClick(); (default FastClick behaviour on document.body)
-  // - new SelectiveFastClick(document.body); (as above)
-  // - new SelectiveFastClick(selectors);
+  // - new SelectiveFastClick(selector); (default FastClick behaviour on document.body)
+  // - new SelectiveFastClick(document.body, selector); (as above)
+  // - new SelectiveFastClick([selector, selector...]);
   // - new SelectiveFastClick(document.body, [selector, selector, ...]);
-  if (!layer) layer = document.body;
-  if (!selectors) return new FastClick(layer);
+  if (!selectors) {
+    selectors = layer;
+    layer = document.body;
+  }
   if (typeof selectors === 'string') selectors = [selectors];
 
   var delegate = this.delegate = new FtDomDelegate(layer);
