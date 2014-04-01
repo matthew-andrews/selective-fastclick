@@ -26,16 +26,8 @@ function SelectiveFastClick(layer, selectors) {
 
   var delegate = this.delegate = new FtDomDelegate(layer);
 
-  // HACKS: Trick FastClick into thinking dom-delegate is a document node
-  // TODO: Find cleaner way of doing this.
-  delegate.nodeType = true;
+  // HACK: Pass in MSTouchAction value
   delegate.style = { msTouchAction: layer.style.msTouchAction };
-
-  // Hacks to ensure the dom delegate uses capture on clicks for Android 2.3
-  delegate.captureForType = function(eventType) {
-    return FtDomDelegate.prototype.captureForType(eventType)
-      || ['mouseover', 'mousedown', 'mouseup', 'click'].indexOf(eventType) !== -1;
-  };
 
   // Quick hacky forEach helper
   function forEach(array, fn) {
@@ -44,13 +36,13 @@ function SelectiveFastClick(layer, selectors) {
 
   delegate.addEventListener = function(eventType, handler, useCapture) {
     forEach(selectors, function(selector) {
-      FtDomDelegate.prototype.on.call(delegate, eventType, selector, handler);
+      FtDomDelegate.prototype.on.call(delegate, eventType, selector, handler, useCapture);
     });
   };
 
   delegate.removeEventListener = function(eventType, handler, useCapture) {
     forEach(selectors, function(selector) {
-      FtDomDelegate.prototype.off.call(delegate, eventType, selector, handler);
+      FtDomDelegate.prototype.off.call(delegate, eventType, selector, handler, useCapture);
     });
   };
 

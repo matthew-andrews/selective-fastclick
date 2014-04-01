@@ -1,6 +1,6 @@
 {
   "name": "selective-fastclick",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,8 +14,8 @@
   "author": "Matt Andrews <matt@mattandre.ws>",
   "license": "MIT",
   "dependencies": {
-    "dom-delegate": "~0.5.0",
-    "fastclick": "~0.6.11",
+    "dom-delegate": "~1.0.0",
+    "fastclick": "~1.0.1",
     "browserify": "~3.30.2"
   },
   "devDependencies": {
