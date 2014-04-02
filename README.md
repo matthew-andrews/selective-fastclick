@@ -10,6 +10,10 @@ npm install selective-fastclick
 
 And `require` with Browserify. Or [download the prebuilt package](http://wzrd.in/standalone/selective-fastclick@latest)
 
+## Demonstration
+
+[See a simple demonstration of Selective FastClick](http://matthew-andrews.github.io/selective-fastclick/examples/demo.html)
+
 ## Usage
 
 ```js
