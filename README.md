@@ -29,6 +29,12 @@ var selectors = [
 SelectiveFastClick.attach(document.body, selectors);
 ```
 
+Or, if you use the **prebuild package**:-
+
+```js
+selectiveFastclick.attach(document.body, selectors);
+```
+
 The first argument of `attach` is the element to attach the event delegator to - and the second argument is a string or array of strings of selectors to match against to provide 'FastClick' behaviour.  Please see the documentation of FastClick for an explanation of what it does the documentation of FT DOM Delegate for details on which selectors are supported.
 
 ## Credits and collaboration ##
