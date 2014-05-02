@@ -15,6 +15,10 @@ And `require` with Browserify. Or [download the prebuilt package](http://wzrd.in
 [See a simple demonstration of Selective FastClick](http://matthew-andrews.github.io/selective-fastclick/examples/demo.html)
 
 ## Usage
+If using the prebuild package use:
+```js
+window.selectiveFastclick.attach(document.body, selectors);
+```
 
 ```js
 var SelectiveFastClick = require('selective-fastclick');
