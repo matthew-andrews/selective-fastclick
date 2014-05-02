@@ -29,7 +29,7 @@ var selectors = [
 SelectiveFastClick.attach(document.body, selectors);
 ```
 
-Or, if you use the **prebuild package**:-
+Or, if you use the **prebuilt package**:-
 
 ```js
 selectiveFastclick.attach(document.body, selectors);
