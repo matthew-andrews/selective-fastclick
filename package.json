@@ -14,11 +14,10 @@
   "author": "Matt Andrews <matt@mattandre.ws>",
   "license": "MIT",
   "dependencies": {
-    "dom-delegate": "~1.0.0",
-    "fastclick": "~1.0.1",
-    "browserify": "~3.30.2"
+    "dom-delegate": "^2.0.3",
+    "fastclick": "^1.0.6"
   },
   "devDependencies": {
-    "browserify": "~3.30.2"
+    "browserify": "^13.1.0"
   }
 }
